@@ -1,4 +1,4 @@
-package com.example.test_lab_week_12.network
+package com.example.test_lab_week_12
 
 import com.example.test_lab_week_12.model.PopularMoviesResponse
 import retrofit2.http.GET

@@ -3,7 +3,6 @@ package com.example.test_lab_week_12
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.test_lab_week_12.data.MovieRepository
 import com.example.test_lab_week_12.model.Movie
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -38,7 +37,7 @@ class MovieViewModel(private val movieRepository: MovieRepository) : ViewModel()
         }
     }
 
-    // Fetch untuk Part 2 (dengan Flow)
+    // Fetch untuk Part 2 (dengan Flow) + ASSIGNMENT
     fun fetchPopularMoviesFlow() {
         viewModelScope.launch(Dispatchers.IO) {
             movieRepository.fetchMoviesFlow()
@@ -46,7 +45,7 @@ class MovieViewModel(private val movieRepository: MovieRepository) : ViewModel()
                     _errorFlow.value = "An exception occurred: ${it.message}"
                 }
                 .collect { movies ->
-                    // Assignment: Filter dan sort by popularity
+                    // ASSIGNMENT: Filter by current year & Sort by popularity
                     val currentYear = Calendar.getInstance().get(Calendar.YEAR).toString()
                     val filteredMovies = movies
                         .filter { movie ->

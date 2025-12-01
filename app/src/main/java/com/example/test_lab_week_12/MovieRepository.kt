@@ -1,9 +1,8 @@
-package com.example.test_lab_week_12.data
+package com.example.test_lab_week_12
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.test_lab_week_12.model.Movie
-import com.example.test_lab_week_12.network.MovieService
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow

@@ -1,8 +1,6 @@
 package com.example.test_lab_week_12
 
 import android.app.Application
-import com.example.test_lab_week_12.data.MovieRepository
-import com.example.test_lab_week_12.network.MovieService
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
